@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from psql_app.views import show_data_json
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('psql/<int:id>/', show_data_json)
 ]
